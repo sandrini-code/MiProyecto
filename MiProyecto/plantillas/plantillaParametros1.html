@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+	 <head>
+		<title>Mi plantilla que recibe parametros</title>
+		 <style type="text/css">
+			 li {
+			 	color: blue;
+			 	}
+		 </style>
+	 </head>
+	 <body>
+		{#este es un comentario#}
+		{% comment %}
+		este es un comentario
+		multilinea
+		{% endcomment %}
+	 <button style="color: red;">salir</button>
+	 <h1>Mi nombre es: {{miNombre}}</h1>
+	 <h2> mi apellido es: {{apellido}} </h2>
+	 <h3>la fecha actual es: {{fechaActual.day}}/{{fechaActual.month}}/{{fechaActual.year}}</h3>
+	 <h4>cantidad de lenguajes: {{lenguajes|length}}</h4>
+	 <ul>
+		 {% for leng in lenguajes %}
+			 {% if leng == "PYTHON"%}
+				<li style="color: red;">{{leng}}</li>
+			 {% else %}
+				<li>{{leng|first}};{{leng|lower}}</li>
+			 {%endif%}
+		 {%endfor%}
+	 </ul>
+	 </body>
+ </html>
