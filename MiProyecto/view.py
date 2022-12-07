@@ -106,3 +106,7 @@ def plantillaHija1(request):
 
 def plantillaHija2(request):
     return render(request, "plantillaHija2.html", {})
+def blog(request):
+    return render(request, "blog.html", {})
+def quienesSomos(request):
+    return render(request, "quienesSomos.html", {})
