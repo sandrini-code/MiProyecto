@@ -19,7 +19,7 @@ from MiProyecto.view import bienvenida, bienvenidaRojo
 from MiProyecto.view import categoria_edad
 from MiProyecto.view import contenido_Html, contenido_Html2
 from MiProyecto.view import miPrimeraPlantilla, plantillaParametros1, plantillaCargador
-from MiProyecto.view import plantillaShortcut, plantillaHija1, plantillaHija2, blog, quienesSomos
+from MiProyecto.view import plantillaShortcut, plantillaHija1, plantillaHija2, blog, quienesSomos, formularioContacto, contactar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,6 +35,8 @@ urlpatterns = [
     path("plantillaHija1/", plantillaHija1),
     path("plantillaHija2/", plantillaHija2),
     path("", blog),
-    path("quienesSomos/", quienesSomos)
+    path("quienesSomos/", quienesSomos),
+    path('formularioContacto/', formularioContacto),
+    path('contactar/', contactar)
     
 ]
