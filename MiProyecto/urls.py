@@ -15,23 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from MiProyecto.view import bienvenida, bienvenidaRojo
-from MiProyecto.view import categoria_edad
-from MiProyecto.view import contenido_Html, contenido_Html2
-from MiProyecto.view import miPrimeraPlantilla, plantillaParametros1, plantillaCargador
-from MiProyecto.view import plantillaShortcut, plantillaHija1, plantillaHija2, blog, quienesSomos, formularioContacto, contactar
+from MiProyecto.view import plantillaHija1, plantillaHija2, blog, quienesSomos, formularioContacto, contactar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("bienvenida/", bienvenida),
-    path("pajaro/", bienvenidaRojo), #url y llamado a la funcion que queremos que se ejecute
-    path("categoriaEdad/<int:edad>", categoria_edad),
-    path("contenido_Html/<nombre>/<int:edad>", contenido_Html),
-    path("contenido_Html2/", contenido_Html2),
-    path("miPrimeraPlantilla/", miPrimeraPlantilla),
-    path("plantillaPrametros1/", plantillaParametros1),
-    path("plantillaCargador/", plantillaCargador),
-    path("plantillaShortcut/", plantillaShortcut),
     path("plantillaHija1/", plantillaHija1),
     path("plantillaHija2/", plantillaHija2),
     path("", blog),
